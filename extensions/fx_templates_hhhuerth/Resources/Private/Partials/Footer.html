@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+    <footer class="pb-3 verticline">
+        <f:cObject data="{colPos:'2', slide:'-1'}"
+                   typoscriptObjectPath="lib.dynamicContent" />
+        <div class="container">
+            <f:for as="socialNav" each="{ctaNavigation}">
+                <f:if condition="{socialNav.data.fa_icon_name}">
+                    <a href="{socialNav.link}"
+                       rel="noopener noreferrer"
+                       class="mr-3 social-icon"
+                       target="{f:if(condition:socialNav.target, then:'{socialNav.target}',else:'_self')}"
+                       title="{socialNav.title}">
+                        <i class="fa fa-4x {socialNav.data.fa_icon_name}" aria-hidden="true"></i>
+                    </a>
+                </f:if>
+            </f:for>
+        </div>
+    </footer>
+    <div class="horizontline bottom"></div>
+</html>

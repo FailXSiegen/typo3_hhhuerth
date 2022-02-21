@@ -1,0 +1,28 @@
+plugin {
+    tx_fxtemplateshhhuerth {
+        settings {
+            # cat=plugin.tx_fxtemplateshhhuerth/basic/2; type=string; label=Root page id
+            rootPageUid = 1
+            # cat=plugin.tx_fxtemplateshhhuerth/basic/3; type=string; label=Main Navigation Path
+            mainNavPageUid = 39
+            # cat=plugin.tx_fxtemplateshhhuerth/basic/4; type=string; label=Top Navigation Path
+            headerNavPageUid =
+            # cat=plugin.tx_fxtemplateshhhuerth/basic/5; type=string; label=Footer Navigation Path
+            footerNavPageUid = 6
+            # cat=plugin.tx_fxtemplateshhhuerth/basic/11; type=string; label=CTA Navigation path id
+            ctaNavPageUid = 44
+            # cat=plugin.tx_fxtemplateshhhuerth/basic/12; type=string; label=Logo path
+            logoPath = EXT:fx_templates_hhhuerth/Resources/Public/Images/hans-hermann_huerth_500px.gif
+        }
+    }
+}
+
+
+
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:fx_templates_hhhuerth/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:fx_templates_hhhuerth/Resources/Private/Partials/Page/
+        templateRootPath = EXT:fx_templates_hhhuerth/Resources/Private/Templates/Page/
+    }
+}
