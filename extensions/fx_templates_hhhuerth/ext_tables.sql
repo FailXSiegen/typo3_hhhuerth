@@ -2,7 +2,7 @@
 # Table structure for table 'tt_content'
 #
 CREATE TABLE tt_content (
-  header text NOT NULL
+  header text DEFAULT '' NOT NULL
 );
 
 #

@@ -83,17 +83,24 @@ page {
         }
     }
     includeCSS {
-        bootstrap = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/bootstrap/dist/css/bootstrap.min.css
-        fontawesome = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/font-awesome/css/font-awesome.min.css
-        owlcarousel = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/owl.carousel/dist/assets/owl.carousel.min.css
-        fancybox = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css
-        custom = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/custom.css
+        #bootstrap = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/bootstrap/dist/css/bootstrap.min.css
+        #fontawesome = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/font-awesome/css/font-awesome.min.css
+        #owlcarousel = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/owl.carousel/dist/assets/owl.carousel.min.css
+        #fancybox = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css
+        abovethefold = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/abovethefold.css
+        abovethefold.inline {
+            inline = 1
+            forceOnTop = 1
+            media = all
+        }
+        fonts = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/fonts.css
+        custom = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/main.css
     }
     includeJSFooterlibs {
-        jquery = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/jquery/dist/jquery.min.js
-        bootstrapJS = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/bootstrap/dist/js/bootstrap.min.js
-        owlcarousel = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/owl.carousel/dist/owl.carousel.min.js
-        fancybox = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js
+        #jquery = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/jquery/dist/jquery.min.js
+        #bootstrapJS = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/bootstrap/dist/js/bootstrap.min.js
+        #owlcarousel = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/owl.carousel/dist/owl.carousel.min.js
+        #fancybox = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js
     }
     includeJSFooter {
         custom = EXT:fx_templates_hhhuerth/Resources/Public/JavaScript/javascript.js

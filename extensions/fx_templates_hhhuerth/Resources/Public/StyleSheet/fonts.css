@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Excalibur';
+    font-display: swap;
+    src: url('../Fonts/Excalibur/ExcaliburNouveau..eot');
+    src: local('Excalibur'),
+        url('../Fonts/Excalibur/ExcaliburNouveau.eot') format('embedded-opentype'),
+        url('../Fonts/Excalibur/ExcaliburNouveau.woff2') format('woff2'),
+        url('../Fonts/Excalibur/ExcaliburNouveau.woff') format('woff'),
+        url('../Fonts/Excalibur/ExcaliburNouveau.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

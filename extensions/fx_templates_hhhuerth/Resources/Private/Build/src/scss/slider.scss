@@ -1,0 +1,21 @@
+@import 'variables';
+@import '../../../../Public/Vendor/bootstrap/scss/functions';
+@import '../../../../Public/Vendor/bootstrap/scss/variables';
+@import '../../../../Public/Vendor/bootstrap/scss/mixins';
+@import '../../../../Public/Vendor/bootstrap/scss/carousel';
+.slide-container {
+    .carousel-indicators [data-bs-target] {
+        width: 37px;
+        height: 7px;
+    }
+    
+    &.carousel:not([class*="pb-"]) {
+        .carousel-indicators {
+            margin-bottom: 0;
+            bottom: -30px;
+        }
+        + * {
+            margin-top: 45px !important;
+        }
+    }
+}

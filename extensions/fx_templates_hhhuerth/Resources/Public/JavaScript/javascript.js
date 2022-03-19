@@ -1,52 +1,32 @@
-$(function () {
-  $('.lightbox').fancybox()
-})
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-$.fn.dropdown = (function() {
-  var $bsDropdown = $.fn.dropdown;
-  return function(config) {
-    if (typeof config === 'string' && config === 'toggle') { // dropdown toggle trigged
-      $('.has-child-dropdown-show').removeClass('has-child-dropdown-show');
-      $(this).closest('.dropdown').parents('.dropdown').addClass('has-child-dropdown-show');
-    }
-    var ret = $bsDropdown.call($(this), config);
-    $(this).off('click.bs.dropdown'); // Turn off dropdown.js click event, it will call 'this.toggle()' internal
-    return ret;
-  }
-})();
+/***/ "./src/javascript/index.js":
+/*!*********************************!*\
+  !*** ./src/javascript/index.js ***!
+  \*********************************/
+/***/ (() => {
 
-$(function() {
-  $('.dropdown [data-toggle="dropdown"]').on('click', function(e) {
-    $(this).dropdown('toggle');
-    e.stopPropagation(); // do not fire dropdown.js click event, it will call 'this.toggle()' internal
-  });
-  $('.dropdown').on('hide.bs.dropdown', function(e) {
-    if ($(this).is('.has-child-dropdown-show')) {
-      $(this).removeClass('has-child-dropdown-show');
-      e.preventDefault();
-    }
-    e.stopPropagation();    // do not need pop in multi level mode
-  });
-});
+eval("var scrollPosition = window.scrollY;\nvar headerContainer = document.getElementById('head');\n\nif (scrollPosition >= 10) {\n  headerContainer.classList.add('sticky-top');\n  headerContainer.classList.add('minify');\n} else {\n  headerContainer.classList.remove('sticky-top');\n  headerContainer.classList.remove('minify');\n}\n\nwindow.addEventListener('scroll', function () {\n  scrollPosition = window.scrollY;\n\n  if (scrollPosition >= 1) {\n    headerContainer.classList.add('sticky-top');\n    headerContainer.classList.add('minify');\n  } else {\n    headerContainer.classList.remove('sticky-top');\n    headerContainer.classList.remove('minify');\n  }\n});\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
 
-// for hover
-$('.dropdown-hover').on('mouseenter',function() {
-  if(!$(this).hasClass('show')){
-    $('>[data-toggle="dropdown"]', this).dropdown('toggle');
-  }
-});
-$('.dropdown-hover').on('mouseleave',function() {
-  if($(this).hasClass('show')){
-    $('>[data-toggle="dropdown"]', this).dropdown('toggle');
-  }
-});
-$('.dropdown-hover-all').on('mouseenter', '.dropdown', function() {
-  if(!$(this).hasClass('show')){
-    $('>[data-toggle="dropdown"]', this).dropdown('toggle');
-  }
-});
-$('.dropdown-hover-all').on('mouseleave', '.dropdown', function() {
-  if($(this).hasClass('show')){
-    $('>[data-toggle="dropdown"]', this).dropdown('toggle');
-  }
-});
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/javascript/index.js"]();
+/******/ 	
+/******/ })()
+;

@@ -37,8 +37,9 @@ call_user_func(
                     'type' => 'text',
                     'cols' => 40,
                     'rows' => 3,
-                    'eval' => 'required',
+                    'default' => ''
                 ],
+                
             ],
         ];
         // Add TCA columns.
@@ -46,5 +47,6 @@ call_user_func(
             'tt_content',
             $columns
         );
-    }, 'fx_templates_hhhuerth'
+    },
+    'fx_templates_hhhuerth'
 );

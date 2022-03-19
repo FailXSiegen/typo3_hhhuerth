@@ -2,8 +2,9 @@ RTE.default.preset = fxnet
 mod {
     web_layout {
         BackendLayouts {
-            default {
-                title = Default
+			startpage {
+                title = Startseite
+				icon = EXT:fx_templates_hhhuerth/Resources/Public/Images/BackendLayouts/fullwidth.svg
                 config {
                     backend_layout {
                         colCount = 1
@@ -37,7 +38,44 @@ mod {
                     }
                 }
             }
-
+            fullwidth {
+                title = Volle Breite
+				icon = EXT:fx_templates_hhhuerth/Resources/Public/Images/BackendLayouts/fullwidth.svg
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+			default {
+                title = Normale Breite
+                icon = EXT:fx_templates_hhhuerth/Resources/Public/Images/BackendLayouts/default.svg
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows.1 {
+                            columns {
+                                1 {
+                                    name = Hauptbereich
+                                    colPos = 0
+                                }
+                            }
+                        }
+                    }
+                }
+			}
         }
     }
 }
@@ -215,4 +253,127 @@ TCEMAIN {
         group = show, editcontent, edit, new, delete
         everybody = show, editcontent, edit, new
     }
+}
+
+
+tx_gridelements.setup {
+    accordion  {
+        title = Accordion
+        config {
+            colCount = 1
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Content
+                        colPos = 101
+                    }
+                }
+            }
+        }
+    }
+	contentwrapper  {
+        title = Content Wrapper
+        config {
+            colCount = 1
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Content
+                        colPos = 101
+                    }
+                }
+            }
+        }
+    }
+    contentslider  {
+        title = Content Slider
+        config {
+            colCount = 1
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Content
+                        colPos = 101
+                    }
+                }
+            }
+        }
+
+    }
+	2cols  {
+        title = Two Columns
+        config {
+            colCount = 2
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Left
+                        colPos = 101
+                    }
+                    2 {
+                        name = Right
+                        colPos = 102
+                    }
+                }
+            }
+        }
+        flexformDS = FILE:EXT:fx_templates_hhhuerth/Configuration/FlexForm/flexform_2col.xml
+    }
+    3cols  {
+        title = Three Columns
+        config {
+            colCount = 3
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Left
+                        colPos = 101
+                    }
+                    2 {
+                        name = Middle
+                        colPos = 102
+                    }
+                    3 {
+                        name = Right
+                        colPos = 103
+                    }
+                } 
+            }
+        }
+        flexformDS = FILE:EXT:fx_templates_hhhuerth/Configuration/FlexForm/flexform_3col.xml
+    }
+    4cols  {
+        title = Four Columns
+        config {
+            colCount = 4
+            rowCount = 1
+            rows.1 {
+                columns {
+                    1 {
+                        name = Left
+                        colPos = 101
+                    }
+                    2 {
+                        name = Middle-left
+                        colPos = 102
+                    }
+                    3 {
+                        name = Middle-right
+                        colPos = 103
+                    }
+                    4 {
+                        name = Right
+                        colPos = 104
+                    }
+                }
+            }
+        }
+        flexformDS = FILE:EXT:fx_templates_hhhuerth/Configuration/FlexForm/flexform_4col.xml
+    }
+
 }
