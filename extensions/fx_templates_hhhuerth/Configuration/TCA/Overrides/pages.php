@@ -31,7 +31,6 @@ if (!defined('TYPO3_MODE')) {
 
 call_user_func(
     function ($_EXTKEY) {
-
         $columns = [
             'fa_icon_name' => [
                 'exclude' => 0,
@@ -50,7 +49,7 @@ call_user_func(
             'pages',
             $columns
         );
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages', 'fa_icon_name','','after:title');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages', 'fa_icon_name', '', 'after:title');
 
         // get absolute path the PageTSconfig directory.
         $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'Configuration/PageTSconfig/';

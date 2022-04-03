@@ -115,6 +115,7 @@ body {
             }
         }  
     }
+   
 }
 footer, .footer {
     .frame-type-2cols {
@@ -139,7 +140,7 @@ footer, .footer {
     }
 }
 .bg-image {
-    z-index: -10;
+   z-index: -10;
 }
 p.line-before {
     padding-left: 40px;
@@ -185,4 +186,7 @@ p.line-before {
             }
         }	
     }
+}
+.object-cover {
+    object-fit: cover;
 }

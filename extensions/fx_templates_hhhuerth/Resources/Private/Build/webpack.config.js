@@ -2,7 +2,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // This is the main configuration object.
 // Here, you write different options and tell Webpack what to do
@@ -98,17 +98,29 @@ module.exports = {
         new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin({
             filename: 'StyleSheet/[name].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: './../../Public/Vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
+                    to: 'JavaScript/'
+                },
+                {
+                    from: './../../Public/Vendor/glightbox/dist/js/glightbox.min.js',
+                    to: 'JavaScript/'
+                }
+            ]
         })
         // More postCSS modules here if needed
     ],
     // Path to your entry point. From this file Webpack will begin its work
     entry: {
-        'bootstrap' : './../../Public/Vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
         'javascript': './src/javascript/index.js',
         'abovethefold': './src/scss/above-the-fold.scss',
         'accordion':  './src/scss/accordion.scss',
         'slider':  './src/scss/slider.scss',
         'main':  './src/scss/main.scss',
+        'glightboxcss' : './src/scss/glightbox.scss',
     },
 
     // Path and filename of your result bundle.

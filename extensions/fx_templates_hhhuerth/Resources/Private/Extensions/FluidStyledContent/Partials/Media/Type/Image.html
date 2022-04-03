@@ -9,6 +9,15 @@
         <f:else>
             <f:if condition="{data.image_zoom}">
                 <f:then>
+                    <f:asset.css 
+                        identifier="glightbox"
+                        href="EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/glightboxcss.css" />
+                    <f:asset.script 
+                        identifier="glightbox-lib"
+                        src="EXT:fx_templates_hhhuerth/Resources/Public/JavaScript/glightbox.min.js" />
+                    <f:asset.script identifier="glightbox-init">
+                        const lightbox = GLightbox();
+                    </f:asset.script>
                     <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
                         <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
                     </ce:link.clickEnlarge>

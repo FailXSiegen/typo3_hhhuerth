@@ -121,10 +121,10 @@ TCEFORM {
 		frame_class {
 		    removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
             addItems {
-                clbg-blue = Blau
-                clbg-red = Rot
-                clbg-white = Weiß
-                clbg-black = Schwarz
+                bg-blue = Blau
+                bg-red = Rot
+                bg-white = Weiß
+                bg-black = Schwarz
             }
 		}
 		space_before_class {
@@ -375,5 +375,36 @@ tx_gridelements.setup {
         }
         flexformDS = FILE:EXT:fx_templates_hhhuerth/Configuration/FlexForm/flexform_4col.xml
     }
-
 }
+mod.wizards.newContentElement.wizardItems {
+   common {
+      elements {
+         project_gallery {
+            iconIdentifier = content-image
+            title = LLL:EXT:fx_templates_hhhuerth/Resources/Private/Language/locallang_db.xlf:project_gallery
+            description = LLL:EXT:fx_templates_hhhuerth/Resources/Private/Language/locallang_db.xlf:project_gallery.description
+            tt_content_defValues {
+               CType = project_gallery
+            }
+         }
+         textimageleft {
+            iconIdentifier = content-textpic
+            title = LLL:EXT:fx_templates_hhhuerth/Resources/Private/Language/locallang_db.xlf:textimageleft
+            description = LLL:EXT:fx_templates_hhhuerth/Resources/Private/Language/locallang_db.xlf:textimageleft.description
+            tt_content_defValues {
+               CType = textimageleft
+            }
+         }
+         textimageright {
+            iconIdentifier = content-textpic
+            title = LLL:EXT:fx_templates_hhhuerth/Resources/Private/Language/locallang_db.xlf:textimageright
+            description = LLL:EXT:fx_templates_hhhuerth/Resources/Private/Language/locallang_db.xlf:textimageright.description
+            tt_content_defValues {
+               CType = textimageright
+            }
+         }
+      }
+      show := addToList(project_gallery,textimageright,textimageleft)
+   }
+}
+#mod.web_list.allowedNewTables := addToList(tx_fxtemplateshhhuerth_domain_model_project)

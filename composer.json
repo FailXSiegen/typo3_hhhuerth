@@ -61,6 +61,7 @@
         "mask/mask": "^7.0",
         "t3/min": "^1.7",
         "lochmueller/staticfilecache": "^11.1",
+        "fluidtypo3/vhs": "^6.0",
         "plan2net/webp": "^3.0",
         "jigal/t3adminer":"^9.5",
         "failx/templates-hhhuerth": "@dev"

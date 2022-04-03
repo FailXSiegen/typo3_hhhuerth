@@ -98,7 +98,7 @@ page {
     }
     includeJSFooterlibs {
         #jquery = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/jquery/dist/jquery.min.js
-        #bootstrapJS = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/bootstrap/dist/js/bootstrap.min.js
+        bootstrap = EXT:fx_templates_hhhuerth/Resources/Public/JavaScript/bootstrap.bundle.min.js
         #owlcarousel = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/owl.carousel/dist/owl.carousel.min.js
         #fancybox = EXT:fx_templates_hhhuerth/Resources/Public/Vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js
     }

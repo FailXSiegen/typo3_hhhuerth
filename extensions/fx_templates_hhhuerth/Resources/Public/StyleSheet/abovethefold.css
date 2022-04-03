@@ -10746,6 +10746,22 @@ progress {
   transform: none;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-blue {
+  background-color: #369;
+}
+
+.bg-grey {
+  background-color: #D1D1D6;
+}
+
+.bg-darkgrey {
+  background-color: #767676;
+}
+
 @media (min-width: 768px) {
   body.default {
     padding: 0;
@@ -10889,6 +10905,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 main {
   position: relative;
   background: #767676 0% 0% no-repeat padding-box;
+  color: #fff;
 }
 main:before, main:after {
   position: absolute;
@@ -10911,6 +10928,14 @@ main:after {
 main > div > div > header {
   color: #fff;
 }
+main > div {
+  z-index: 5;
+  position: relative;
+}
+main > div a, main > div a:active, main > div a:hover, main > div a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
 
 footer p {
   line-height: 1.5;
@@ -10928,4 +10953,18 @@ footer ul li {
   margin: 0;
   padding: 0;
   font-size: 16px;
+}
+
+.bg-white {
+  color: #767676;
+}
+.bg-white h2, .bg-white .h2, .bg-white h3, .bg-white .h3 {
+  color: #369;
+}
+
+.frame-type-gridelements_pi1 .bg-white.frame-type-textpic {
+  padding: 0;
+}
+.frame-type-gridelements_pi1 .bg-white.frame-type-textpic .ce-bodytext {
+  padding: 15px;
 }

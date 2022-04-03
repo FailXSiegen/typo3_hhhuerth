@@ -10217,3 +10217,7 @@ p.line-before:before {
 .cl-darkgrey::first-line {
   color: #767676 !important;
 }
+
+.object-cover {
+  object-fit: cover;
+}

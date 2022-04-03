@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <f:layout name="Default" />
+    <f:section name="Main">
+        <f:asset.css 
+            identifier="glightbox"
+            href="EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/glightboxcss.css" />
+        <f:asset.script 
+            identifier="glightbox-lib"
+            src="EXT:fx_templates_hhhuerth/Resources/Public/JavaScript/glightbox.min.js" />
+        <f:asset.script identifier="glightbox-init">
+            const lightbox = GLightbox();
+        </f:asset.script>
+        <div class="row">
+            <f:for each="{projects}" as="project">
+                <f:if condition="{project.imageBefore.0}">
+                    <f:variable name="colWidth" value="{f:if(condition: '{project.gallerytype}', then: 'col-12 col-lg-8', else: 'col-12 col-lg-4')}" />
+                    <div class="{colWidth} mb-4">
+                        <f:render partial="ProjectItem" arguments="{project: project}" />
+                    </div>
+                </f:if>
+            </f:for>
+        </div>
+    </f:section>
+</html>

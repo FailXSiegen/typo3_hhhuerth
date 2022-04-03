@@ -27,3 +27,37 @@ lib {
         90 = RESTORE_REGISTER
     }
 }
+tt_content {
+    project_gallery =< lib.contentElement
+    project_gallery {
+        templateName = ProjectGallery
+        dataProcessing {
+            10 = Failx\FxTemplatesHhhuerth\DataProcessing\AddProjectsToContentProcessor
+            10 {
+                as = projects
+            }
+        }
+    }
+    textimageleft =< lib.contentElement
+    textimageleft {
+        templateName = TextImageLeft
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as=image
+            }
+        }
+    }
+    textimageright =< lib.contentElement
+    textimageright {
+        templateName = TextImageRight
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as=image
+            }
+        }
+    }
+}

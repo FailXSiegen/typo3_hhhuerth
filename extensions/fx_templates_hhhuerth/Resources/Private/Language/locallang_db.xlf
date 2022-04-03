@@ -3,6 +3,28 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2015-02-07T00:02:05Z" product-name="bootstrap_grids">
         <header/>
         <body>
+
+			<trans-unit id="tx_fxtemplateshhhuerth_domain_model_project" xml:space="preserve">
+				<source>Projekt-Gallerie Objekt</source>
+			</trans-unit>
+			<trans-unit id="textimageleft" xml:space="preserve">
+				<source>Text mit Bild Links</source>
+			</trans-unit>
+			<trans-unit id="textimageleft.description" xml:space="preserve">
+				<source>Weiße Box mit Text rechts und Bild vollflächig links</source>
+			</trans-unit>
+			<trans-unit id="textimageright" xml:space="preserve">
+				<source>Text mit Bild Rechts</source>
+			</trans-unit>
+			<trans-unit id="textimageright.description" xml:space="preserve">
+				<source>Weiße Box mit Text links und Bild vollflächig rechts</source>
+			</trans-unit>
+			<trans-unit id="project_gallery" xml:space="preserve">
+				<source>Projekt-Gallerie</source>
+			</trans-unit>
+			<trans-unit id="project_gallery.description" xml:space="preserve">
+				<source>Darstellung von verschiedenen Projekten als Gallerie</source>
+			</trans-unit>
             <trans-unit id="2cols.title" xml:space="preserve">
 				<source>2 columns</source>
 			</trans-unit>
