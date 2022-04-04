@@ -94,6 +94,7 @@ page {
             media = all
         }
         fonts = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/fonts.css
+        fontawesome = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/font-awesome.css
         custom = EXT:fx_templates_hhhuerth/Resources/Public/StyleSheet/main.css
     }
     includeJSFooterlibs {

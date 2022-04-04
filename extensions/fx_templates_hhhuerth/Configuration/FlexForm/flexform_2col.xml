@@ -4,6 +4,71 @@
         <langDisable>1</langDisable>
     </meta>
     <sheets>
+        <additionalConfig>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>Inhaltsoptionen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <showButton type="array">
+                        <TCEforms type="array">
+                            <label>Button einschalten</label>
+                            <onChange>reload</onChange>
+                            <config type="array">
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                            </config>
+                        </TCEforms>
+                    </showButton>
+                    <buttonText type="array">
+                        <TCEforms type="array">
+                            <label>Button Text</label>
+                            <displayCond>FIELD:showButton:=:1</displayCond>
+                            <config type="array">
+                                <type>input</type>
+                                <eval>required</eval>
+                            </config>
+                        </TCEforms>
+                    </buttonText>
+                    <buttonTarget type="array">
+                        <TCEforms type="array">
+                            <label>Button Ziel</label>
+                            <displayCond>FIELD:showButton:=:1</displayCond>
+                            <config type="array">
+                                <type>input</type>
+                                <renderType>inputLink</renderType>
+                                <eval>required</eval>
+                            </config>
+                        </TCEforms>
+                    </buttonTarget>
+                    <buttonPosition type="array">
+                        <TCEforms type="array">
+                            <label>Button Position</label>
+                            <displayCond>FIELD:showButton:=:1</displayCond>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Oben Mitte</numIndex>
+                                        <numIndex index="1">position-absolute top-0 start-50 translate-middle</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Oben Links</numIndex>
+                                        <numIndex index="1">position-absolute top-0 start-0 translate-middle-y</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Oben Rechts</numIndex>
+                                        <numIndex index="1">position-absolute top-0 end-0 translate-middle-y</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </buttonPosition>
+                </el>
+            </ROOT>
+        </additionalConfig>
         <sDEF>
             <ROOT type="array">
                 <TCEforms>

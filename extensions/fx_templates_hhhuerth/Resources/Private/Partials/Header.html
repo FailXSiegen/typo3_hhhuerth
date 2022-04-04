@@ -45,16 +45,19 @@
                                         itemprop="name">
                                         <f:if condition="{nav.children}">
                                             <f:then>
-                                                <a class="dropdown-toggle"
-                                                    href="#" 
-                                                    role="button"
-                                                    data-bs-toggle="dropdown"
-                                                    data-bs-auto-close="outside"
-                                                    aria-expanded="false"
-                                                    target="_self"
+                                                <a href="{nav.link}"
+                                                    target="{f:if(condition:nav.target, then:'{nav.target}',else:'_self')}"
                                                     title="{nav.title}">
                                                     {nav.title}
                                                 </a>
+                                                <a role="button"
+                                                    class="dropdown-toggle dropdown-toggle-split" 
+                                                    data-bs-toggle="dropdown" 
+                                                    data-bs-auto-close="outside"
+                                                    aria-expanded="false">
+                                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                                </a>
+                                        
                                                 <ul class="dropdown-menu lvl2 mt-0" role="menu">
                                                     <f:for as="secondlevel" each="{nav.children}">
                                                         <li class="nav-item  {f:if(condition: secondlevel.children,then:'dropdown hassub')} {f:if(condition: secondlevel.current,then:'current')}">
@@ -66,14 +69,18 @@
                                                                     <f:if condition="{secondlevel.children}">
                                                                         <f:then>
                                                                             <div class="dropdown dropend">
-                                                                                <a class="dropdown-item dropdown-toggle"
-                                                                                    data-bs-toggle="dropdown"
-                                                                                    aria-haspopup="true"
-                                                                                    aria-expanded="false"
-                                                                                    href="#"
-                                                                                    target="_self"
+                                                                                <a href="{secondlevel.link}"
+                                                                                    class="ps-3"
+                                                                                    target="{f:if(condition:nav.target, then:'{secondlevel.target}',else:'_self')}"
                                                                                     title="{secondlevel.title}">
                                                                                     {secondlevel.title}
+                                                                                </a>
+                                                                                <a role="button"
+                                                                                    class="dropdown-toggle dropdown-toggle-split pull-right pe-3" 
+                                                                                    data-bs-toggle="dropdown" 
+                                                                                    data-bs-auto-close="outside"
+                                                                                    aria-expanded="false">
+                                                                                    <span class="visually-hidden">Toggle Dropdown</span>
                                                                                 </a>
                                                                                 <div class="dropdown-menu">
                                                                                     <f:for as="thirdlevel"
@@ -113,19 +120,6 @@
                                         </f:if>
                                     </li>
                                 </f:for>
-                                <li class="ml-lg-3 d-flex">
-                                    <f:for as="socialNav" each="{ctaNavigation}">
-                                        <f:if condition="{socialNav.data.fa_icon_name}">
-                                            <a href="{socialNav.link}"
-                                                rel="noopener noreferrer"
-                                                class="ml-3 social-icon"
-                                                target="{f:if(condition:socialNav.target, then:'{socialNav.target}',else:'_self')}"
-                                                title="{socialNav.title}">
-                                                <i class="fa fa-2x {socialNav.data.fa_icon_name}" aria-hidden="true"></i>
-                                            </a>
-                                        </f:if>
-                                    </f:for>
-                                </li>
                             </ul>
                         </div>
                     </nav>

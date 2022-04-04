@@ -118,7 +118,9 @@ main {
     position: relative;
     background: #767676 0% 0% no-repeat padding-box;
     color: $white;
-  
+    .ce-image {
+        overflow: initial;
+    }
     &:before, &:after {
         position: absolute;
         content: '';

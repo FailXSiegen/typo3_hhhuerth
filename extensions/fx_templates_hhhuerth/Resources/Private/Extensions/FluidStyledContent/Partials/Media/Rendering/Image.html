@@ -6,7 +6,10 @@
         <f:media class="image-embed-item img img-fluid" file="{file}" width="{dimensions.width}"
                  height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" />
     </f:comment>
-
+    <f:variable name="shadow" value="{file.properties.shadow}" />
+    <f:if condition="{file.originalResource.properties.shadow}">
+        <f:variable name="shadow" value="{file.originalResource.properties.shadow}" />
+    </f:if>
     <f:variable name="width" value="{f:if(condition: pwidth, then:'{pwidth}', else:'{dimensions.width}')}" />
     <f:variable name="height" value="{f:if(condition: pheight, then:'{pheight}', else:'{dimensions.height}')}" />
     <f:variable name="xswidth" value="{f:if(condition: pxswidth, then:'{pxswidth}', else:'767m')}" />
@@ -16,6 +19,7 @@
     <f:variable name="mdwidth" value="{f:if(condition: pmdwidth, then:'{pmdwidth}', else:'1200m')}" />
     <f:variable name="mdheight" value="{f:if(condition: pmdheight, then:'{pmdheight}', else:'')}" />
     <f:variable name="cssClass" value="{f:if(condition: pcssClass, then:'{pcssClass}', else:'img img-fluid')}" />
+
     <picture>
         <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-portrait') -> v:format.substring(start:'1')}.webp">
         <source media="(max-width: 767px) and (orientation:portrait)"
@@ -73,7 +77,7 @@
         
         <f:image treatIdAsReference="1"
                         loading="{lazyLoading}"
-                        class="{cssClass}" 
+                        class="{cssClass} {f:if(condition:shadow,then:'shadow')}" 
                         maxWidth="1920"
                         width="{width}"
                         height="{height}"

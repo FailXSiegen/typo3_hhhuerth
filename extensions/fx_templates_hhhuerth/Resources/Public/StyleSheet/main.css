@@ -803,7 +803,7 @@ progress {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 14px 7px 10px #0000006B !important;
 }
 
 .shadow-sm {

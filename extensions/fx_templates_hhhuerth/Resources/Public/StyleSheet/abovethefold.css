@@ -10907,6 +10907,9 @@ main {
   background: #767676 0% 0% no-repeat padding-box;
   color: #fff;
 }
+main .ce-image {
+  overflow: initial;
+}
 main:before, main:after {
   position: absolute;
   content: "";

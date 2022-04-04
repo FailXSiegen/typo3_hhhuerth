@@ -13,6 +13,15 @@ CREATE TABLE pages (
   fa_icon_name varchar(255) DEFAULT '' NOT NULL
 );
 
+
+#
+# Table structure for table 'sys_file_reference'
+#
+CREATE TABLE sys_file_reference (
+  shadow tinyint(4) DEFAULT 0 NOT NULL
+);
+
+
 #
 # Table structure for table 'tx_fxtemplateshhhuerth_domain_model_project'
 #
