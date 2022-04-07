@@ -10808,14 +10808,17 @@ progress {
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 0.9vw;
   background-repeat: no-repeat;
   background-position: top left;
   background-image: url(../8c11fec1d8948db367c4.svg);
 }
 
+.hassub {
+  white-space: nowrap;
+}
+
 #head {
-  min-height: 165px;
   background-color: white;
 }
 
@@ -10885,6 +10888,10 @@ main > .container-xxl + .container {
   }
 }
 @media (min-width: 1200px) {
+  #head {
+    min-height: 165px;
+  }
+
   .dropdown-menu[data-bs-popper] {
     left: 8px;
     margin-top: 0.95rem;
@@ -10910,23 +10917,25 @@ main {
 main .ce-image {
   overflow: initial;
 }
-main:before, main:after {
-  position: absolute;
-  content: "";
-  top: 4px;
-  height: 100%;
-  width: 412px;
-  background-image: url(../50a9faf22098676ae192.png);
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-main:before {
-  left: 15px;
-  transform: scaleX(-1);
-  filter: FlipH;
-}
-main:after {
-  right: 15px;
+@media (min-width: 1200px) {
+  main:before, main:after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    height: 100%;
+    width: 412px;
+    background-image: url(../50a9faf22098676ae192.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  main:before {
+    left: 15px;
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+  main:after {
+    right: 15px;
+  }
 }
 main > div > div > header {
   color: #fff;

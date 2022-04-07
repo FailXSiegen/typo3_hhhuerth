@@ -60,13 +60,15 @@
     }
 }
 .logo {
-    font-size: 20px;
+    font-size: 0.9vw;
     background-repeat: no-repeat;
     background-position: top left;
     background-image: url('./../../../../Public/Images/Layout/Ornament_logo.svg');
 }
+.hassub  {
+    white-space: nowrap;
+}
 #head {
-    min-height: 165px;
     background-color: white;
 }
 @include media-breakpoint-down(xl) {
@@ -98,6 +100,9 @@
 
 }
 @include media-breakpoint-up(xl) {
+    #head {
+        min-height: 165px;
+    }
     .dropdown-menu {
         &[data-bs-popper] {
             left: 8px;
@@ -121,23 +126,25 @@ main {
     .ce-image {
         overflow: initial;
     }
-    &:before, &:after {
-        position: absolute;
-        content: '';
-        top: 4px;
-        height: 100%;
-        width: 412px;
-        background-image: url('./../../../../Public/Images/Layout/saule_lang.png');
-        background-repeat: no-repeat;
-        background-size: auto;
-    }
-    &:before {
-        left: 15px;
-        transform: scaleX(-1);
-        filter: FlipH;
-    }
-    &:after {
-        right: 15px;
+    @include media-breakpoint-up(xl) {
+        &:before, &:after {
+            position: absolute;
+            content: '';
+            top: 4px;
+            height: 100%;
+            width: 412px;
+            background-image: url('./../../../../Public/Images/Layout/saule_lang.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        &:before {
+            left: 15px;
+            transform: scaleX(-1);
+            filter: FlipH;
+        }
+        &:after {
+            right: 15px;
+        }
     }
     > div > div > header {
         color: $white;

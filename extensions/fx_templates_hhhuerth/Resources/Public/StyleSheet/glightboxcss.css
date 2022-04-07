@@ -9,7 +9,11 @@
   position: relative;
   display: block;
 }
-.glightbox:after {
+.glightbox > picture {
+  position: relative;
+  display: inline-block;
+}
+.glightbox > picture:after {
   content: "+";
   border: 1px solid white;
   border-radius: 50%;

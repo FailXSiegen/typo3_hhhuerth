@@ -4,38 +4,48 @@
         <div class="container-fluid">
             <div class="row align-items-end">
                 <div class="col-12 col-xl-3 position-relative">
-                    <span class="position-absolute top-0 start-0 horizontline top w-100"></span>
-                    <span class="verticline position-absolute top-0 start-0 h-50"></span>
-                    <f:if condition="{logoPath}">
-                        
-                        <div class="pt-5 ps-5 mt-3 position-relative logo" 
-                            itemscope 
-                            itemtype="http://schema.org/Organization">
-                            <f:link.typolink 
-                                    additionalAttributes="{'itemprop':'url'}" 
-                                    parameter="{rootPageUid}">
-                                <f:image alt="Hans-Hermann Hürth - Denkmalpflege, Ausbau und Erneuerung" 
-                                    class="logo-img img img-fluid"
-                                    src="{logoPath}" width="405m" />
-                                <p>Denkmalpflege, Ausbau und Erneuerung</p>
-                            </f:link.typolink>
+                    <div class="row">
+                        <div class="col-9 col-xl-auto">
+                            <f:if condition="{logoPath}">
+                                <div class="pt-5 ps-5 mt-3 pb-3 pb-xl-0 position-relative logo" 
+                                    itemscope 
+                                    itemtype="http://schema.org/Organization">
+                                   
+                                    <f:link.typolink 
+                                            additionalAttributes="{'itemprop':'url'}" 
+                                            parameter="{rootPageUid}">
+                                            <picture>
+                                                <source media="(max-width: 767px)"
+                                                        srcset="{f:uri.image(src:'{logoPath}',treatIdAsReference:'0', width: '175m')}">
+                                                <source media="(min-width: 768px)"
+                                                        srcset="{f:uri.image(src:'{logoPath}',treatIdAsReference:'0', width: '342m')}">
+                                        
+                                                <f:image alt="Hans-Hermann Hürth - Denkmalpflege, Ausbau und Erneuerung" 
+                                                        class="logo-img img img-fluid"
+                                                        src="{logoPath}" 
+                                                        width="342m" />
+                                            </picture>
+                                            <p class="d-none d-xl-block">Denkmalpflege, Ausbau und Erneuerung</p>
+                                    </f:link.typolink>
+                                </div>
+                            
+                            </f:if>
                         </div>
-                     
-                    </f:if>
-                    <div class="navbar-header navbar-expand-xl row">
-                        <div class="col-12 text-right d-xl-none d-flex justify-content-end">
-                            <button class="navbar-toggler" 
-                             type="button" 
-                             data-bs-toggle="collapse" 
-                             data-bs-target="#navwrap" aria-controls="navwrap"
-                             aria-expanded="false" 
-                             aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button>
+                        <div class="col-3 d-xl-none d-flex align-items-end">
+                            <div class="navbar-header navbar-expand-xl navbar-light">
+                                <button class="navbar-toggler" 
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#navwrap" aria-controls="navwrap"
+                                    aria-expanded="false" 
+                                    aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-9 mb-3 pe-5 d-flex justify-content-center">
+                <div class="col-12 col-xl-9 mb-xl-3 pe-xl-5 d-flex justify-content-center">
                     <nav class="navbar navbar-expand-xl w-100 p-0" id="nav" itemscope
                             itemtype="http://schema.org/SiteNavigationElement">
                         <div class="collapse navbar-collapse" id="navwrap">
