@@ -31,15 +31,15 @@
                             
                             </f:if>
                         </div>
-                        <div class="col-3 d-xl-none d-flex align-items-end">
-                            <div class="navbar-header navbar-expand-xl navbar-light">
-                                <button class="navbar-toggler" 
+                        <div class="col-3 d-xl-none d-flex align-items-center justify-content-end">
+                            <div class="navbar-header navbar-expand-xl navbar-dark">
+                                <button class="navbar-toggler bg-darkgrey" 
                                     type="button" 
                                     data-bs-toggle="collapse" 
                                     data-bs-target="#navwrap" aria-controls="navwrap"
                                     aria-expanded="false" 
                                     aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
+                                        <span class="navbar-toggler-icon p-4"></span>
                                     </button>
                             </div>
                         </div>
@@ -68,9 +68,9 @@
                                                     <span class="visually-hidden">Toggle Dropdown</span>
                                                 </a>
                                         
-                                                <ul class="dropdown-menu lvl2 mt-0" role="menu">
+                                                <ul class="dropdown-menu lvl2 mt-0 w-100" role="menu">
                                                     <f:for as="secondlevel" each="{nav.children}">
-                                                        <li class="nav-item  {f:if(condition: secondlevel.children,then:'dropdown hassub')} {f:if(condition: secondlevel.current,then:'current')}">
+                                                        <li class="nav-item text-center text-xl-start {f:if(condition: secondlevel.children,then:'dropdown hassub')} {f:if(condition: secondlevel.current,then:'current')}">
                                                             <f:if condition="{secondlevel.data.doktype} == 199">
                                                                 <f:then>
                                                                     <div class="dropdown-divider"></div>
@@ -86,13 +86,13 @@
                                                                                     {secondlevel.title}
                                                                                 </a>
                                                                                 <a role="button"
-                                                                                    class="dropdown-toggle dropdown-toggle-split pull-right pe-3" 
+                                                                                    class="dropdown-toggle dropdown-toggle-split float-xl-end pe-3" 
                                                                                     data-bs-toggle="dropdown" 
                                                                                     data-bs-auto-close="outside"
                                                                                     aria-expanded="false">
                                                                                     <span class="visually-hidden">Toggle Dropdown</span>
                                                                                 </a>
-                                                                                <div class="dropdown-menu">
+                                                                                <div class="dropdown-menu text-center text-xl-start">
                                                                                     <f:for as="thirdlevel"
                                                                                             each="{secondlevel.children}">
                                                                                         <a href="{thirdlevel.link}"

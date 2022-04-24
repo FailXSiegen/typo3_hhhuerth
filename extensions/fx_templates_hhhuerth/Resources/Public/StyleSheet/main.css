@@ -10070,10 +10070,6 @@ body .align-items-stretch > div > div[class*=bg-] {
     height: 100%;
   }
 }
-body .navbar-toggler {
-  border: 0;
-  background: transparent;
-}
 body .navbar-toggler[aria-expanded=false] svg:last-child {
   display: none;
 }

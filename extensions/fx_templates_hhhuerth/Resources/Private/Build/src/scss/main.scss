@@ -51,8 +51,6 @@ body {
     } 
 
     .navbar-toggler {
-        border: 0;
-        background: transparent;
         &[aria-expanded="false"] {
             svg:last-child {display: none;}
         }
