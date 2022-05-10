@@ -16,7 +16,6 @@ $tx_fxtemplateshhhuerth_domain_model_project = [
         'sortby' => 'sorting',
         'default_sortby' => 'title',
         'versioningWS' => true,
-        'rootLevel' => -1,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l18n_parent',
@@ -122,6 +121,7 @@ $tx_fxtemplateshhhuerth_domain_model_project = [
         ],
         'title' => [
             'label' => 'Titel',
+            'exclude' => false,
             'config' => [
                 'type' => 'input',
             ],
@@ -136,7 +136,7 @@ $tx_fxtemplateshhhuerth_domain_model_project = [
             ]
         ],
         'gallerytype' => [
-            'exclude' => true,
+            'exclude' => false,
             'label' => 'Gallerie-Typ',
             'onChange' => 'reload',
             'config' => [
@@ -156,7 +156,7 @@ $tx_fxtemplateshhhuerth_domain_model_project = [
             ]
         ],
         'image_before' => [
-            'exclude' => true,
+            'exclude' => false,
             'label' => 'Bild',
             'description' => 'Startbild; Erforderliches Feld!',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
