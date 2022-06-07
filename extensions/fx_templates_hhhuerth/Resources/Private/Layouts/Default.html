@@ -1,18 +1,22 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-    <f:layout name="Default" />
-    <f:render partial="Header" arguments="{_all}" />
-    <main class="pb-8 pt-5">
-        <f:render section="Main" />
-        <div class="position-absolute bottom-0 start-0 ps-4 pb-4">
-            <f:image 
-                src="fileadmin/images/unternehmen/logo_meisterhaft_5_sterne.jpg"
-                alt="5 Sterne - Deutsche Bauwirtschaft - Meisterhaft"
-                width="140m"
-                />
-
+<f:layout name="Default" />
+<f:render partial="Header" arguments="{_all}" />
+<main class="pb-10 pt-5">
+    <f:render section="Main" />
+    <div class="position-absolute bottom-0 start-0 ps-4 pb-4">
+        <f:image src="EXT:fx_templates_hhhuerth/Resources/Public/Images/logo_meisterhaft_5_sterne.jpg"
+            alt="5 Sterne - Deutsche Bauwirtschaft - Meisterhaft" width="140m" />
+        <div class="d-flex justify-content-between">
+            <f:image src="EXT:fx_templates_hhhuerth/Resources/Public/Images/TopMaler_Logo_mitText_RGB.png"
+                alt="Auszeichnung Top Maler" width="65m" />
+            <f:image src="EXT:fx_templates_hhhuerth/Resources/Public/Images/TopStuckateur_Logo_mitText_RGB.png"
+                alt="Auszeichnung Top Stuckateur" width="65m" />
         </div>
-    </main>
-    <f:render partial="Footer" arguments="{_all}" />
+
+
+    </div>
+</main>
+<f:render partial="Footer" arguments="{_all}" />
+
 </html>

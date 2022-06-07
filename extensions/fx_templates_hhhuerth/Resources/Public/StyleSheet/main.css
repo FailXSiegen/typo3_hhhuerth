@@ -10040,13 +10040,15 @@ body a {
   text-decoration: none;
 }
 body .ce-right.ce-intext .ce-bodytext,
-body .ce-right.ce-intext .ce-gallery, body .ce-left.ce-intext .ce-bodytext,
+body .ce-right.ce-intext .ce-gallery,
+body .ce-left.ce-intext .ce-bodytext,
 body .ce-left.ce-intext .ce-gallery {
   width: 100%;
 }
 @media (min-width: 768px) {
   body .ce-right.ce-intext .ce-bodytext,
-body .ce-right.ce-intext .ce-gallery, body .ce-left.ce-intext .ce-bodytext,
+body .ce-right.ce-intext .ce-gallery,
+body .ce-left.ce-intext .ce-bodytext,
 body .ce-left.ce-intext .ce-gallery {
     width: auto;
   }
@@ -10118,16 +10120,19 @@ body #head.minify .logo:hover svg path:nth-child(-n+2) {
 }
 
 @media (min-width: 768px) {
-  footer .frame-type-2cols, .footer .frame-type-2cols {
+  footer .frame-type-2cols,
+.footer .frame-type-2cols {
     font-size: 60px;
     font-weight: bold;
   }
 }
-footer .frame-type-menu_subpages, .footer .frame-type-menu_subpages {
+footer .frame-type-menu_subpages,
+.footer .frame-type-menu_subpages {
   font-weight: bold;
 }
 @media (min-width: 768px) {
-  footer .frame-type-menu_subpages, .footer .frame-type-menu_subpages {
+  footer .frame-type-menu_subpages,
+.footer .frame-type-menu_subpages {
     font-size: 32px;
   }
 }
@@ -10170,7 +10175,7 @@ p.line-before:before {
 .col-12 + .col-12 {
   margin-top: calc(var(--bs-gutter-x) * 0.5);
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .col-12 + .col-12 {
     margin-top: 0;
   }
@@ -10189,31 +10194,39 @@ p.line-before:before {
 .cl-white {
   color: #fff !important;
 }
-.cl-white::first-line {
-  color: #fff !important;
+
+.btn-border-white {
+  border: 1px solid #fff;
 }
 
 .cl-blue {
   color: #369 !important;
 }
-.cl-blue::first-line {
-  color: #369 !important;
+
+.btn-border-blue {
+  border: 1px solid #369;
 }
 
 .cl-grey {
   color: #D1D1D6 !important;
 }
-.cl-grey::first-line {
-  color: #D1D1D6 !important;
+
+.btn-border-grey {
+  border: 1px solid #D1D1D6;
 }
 
 .cl-darkgrey {
   color: #767676 !important;
 }
-.cl-darkgrey::first-line {
-  color: #767676 !important;
+
+.btn-border-darkgrey {
+  border: 1px solid #767676;
 }
 
 .object-cover {
   object-fit: cover;
+}
+
+figure {
+  margin: 0 0 1.5rem;
 }

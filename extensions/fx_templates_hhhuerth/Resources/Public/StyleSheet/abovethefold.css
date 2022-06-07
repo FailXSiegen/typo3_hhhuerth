@@ -10807,13 +10807,6 @@ progress {
   background: none;
 }
 
-.logo {
-  font-size: 0.9vw;
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-image: url(../8c11fec1d8948db367c4.svg);
-}
-
 .hassub {
   white-space: nowrap;
 }
@@ -10905,7 +10898,12 @@ main > .container-xxl + .container {
   flex: 1 1 auto !important;
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   letter-spacing: 0.1em;
 }
 
@@ -10944,8 +10942,18 @@ main > div {
   z-index: 5;
   position: relative;
 }
-main > div a, main > div a:active, main > div a:hover, main > div a:focus {
+main > div a,
+main > div a:active,
+main > div a:hover,
+main > div a:focus {
   color: #fff;
+  text-decoration: underline;
+}
+main > div .bg-white a,
+main > div .bg-white a:active,
+main > div .bg-white a:hover,
+main > div .bg-white a:focus {
+  color: #369;
   text-decoration: underline;
 }
 
@@ -10953,12 +10961,14 @@ footer p {
   line-height: 1.5;
   font-size: 16px;
 }
-footer ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 footer ul li {
   list-style: none;
@@ -10970,7 +10980,10 @@ footer ul li {
 .bg-white {
   color: #767676;
 }
-.bg-white h2, .bg-white .h2, .bg-white h3, .bg-white .h3 {
+.bg-white h2,
+.bg-white .h2,
+.bg-white h3,
+.bg-white .h3 {
   color: #369;
 }
 
@@ -10979,4 +10992,10 @@ footer ul li {
 }
 .frame-type-gridelements_pi1 .bg-white.frame-type-textpic .ce-bodytext {
   padding: 15px;
+}
+
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100% !important;
+  }
 }

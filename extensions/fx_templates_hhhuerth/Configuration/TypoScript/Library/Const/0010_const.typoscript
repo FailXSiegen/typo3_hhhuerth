@@ -12,7 +12,7 @@ plugin {
             # cat=plugin.tx_fxtemplateshhhuerth/basic/11; type=string; label=CTA Navigation path id
             ctaNavPageUid = 44
             # cat=plugin.tx_fxtemplateshhhuerth/basic/12; type=string; label=Logo path
-            logoPath = EXT:fx_templates_hhhuerth/Resources/Public/Images/hans-hermann_huerth_500px.gif
+            logoPath = EXT:fx_templates_hhhuerth/Resources/Public/Images/Logo_HHHuerth.svg
         }
     }
 }
